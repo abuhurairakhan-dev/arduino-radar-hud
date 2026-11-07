@@ -5,8 +5,9 @@
 [![PlatformIO](https://img.shields.io/badge/Firmware-PlatformIO%20%7C%20Arduino%20IDE-orange.svg?logo=platformio&logoColor=white)](https://platformio.org/)
 [![Pygame](https://img.shields.io/badge/HUD-Pygame%202.5-green.svg)](https://www.pygame.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Developer](https://img.shields.io/badge/Developer-Abhuraira%20Khan-blueviolet.svg)](#author--credits)
 
-An interactive cyber-physical ultrasonic radar platform. Pairs an **Arduino Uno R3**, **SG90 micro-servo**, **HC-SR04 ultrasonic rangefinder**, and an **autonomous dual visual/acoustic alarm subsystem** with a real-time, movie-grade **Sci-Fi Tactical HUD Visualizer** rendered in Python using Pygame and NumPy.
+An interactive cyber-physical ultrasonic radar platform developed by **Abhuraira Khan**. Pairs an **Arduino Uno R3**, **SG90 micro-servo**, **HC-SR04 ultrasonic rangefinder**, and an **autonomous dual visual/acoustic alarm subsystem** with a real-time, movie-grade **Sci-Fi Tactical HUD Visualizer** rendered in Python using Pygame and NumPy.
 
 ---
 
@@ -216,6 +217,14 @@ arduino-ultrasonic-radar-system/
 
 Contributions, issues, and feature requests are welcome!  
 Feel free to review the [Contribution Guidelines](CONTRIBUTING.md) to get started with local testing, firmware timing rules, and pull request procedures.
+
+---
+
+## Author & Credits
+
+* **Developed by**: **Abhuraira Khan**
+* **Project**: NEXUS-7 Ultrasonic Radar & Tactical HUD Visualizer
+* **Contributions**: Feedback, issue reports, and pull requests are warmly welcomed!
 
 ---
 
