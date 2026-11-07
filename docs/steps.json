@@ -1,0 +1,278 @@
+[
+  {
+    "order": 1,
+    "title": "Place the breadboard",
+    "description": "The breadboard provides the electrical grid for the entire circuit. It consists of two separate power rails (top and bottom) and a main terminal area with two independent electrical banks (left a-e and right f-j). The gap between columns e and f is a physical and electrical break, so signals cannot cross from left to right without a jumper wire.",
+    "instructions": "Pick up the full-size breadboard. Orient it so the blue strip (or the side with the notch) is facing you and the power rails are on the left and right edges. Place it on your workbench so there is space on the left for the Arduino and on the right for the servo motor.",
+    "components": [],
+    "holes": [],
+    "highlightComponents": [],
+    "highlightPins": [],
+    "wires": [],
+    "notes": "Ensure the breadboard is flat and stable before proceeding."
+  },
+  {
+    "order": 2,
+    "title": "Place the Arduino Uno",
+    "description": "The Arduino Uno is the brain of the project. It provides the 5V power supply and digital logic pins required to control the sensors, servo motor, and output devices. It connects to the breadboard's power rails to distribute power to all components.",
+    "instructions": "Pick up the Arduino Uno. Align it so that its USB port faces away from you (or to the right) and the text on the board is readable. Place it to the left of the breadboard so the rows on the breadboard's left side (columns a-e) sit directly under the Arduino's headers.",
+    "components": [
+      "arduino_1"
+    ],
+    "holes": [],
+    "highlightComponents": [
+      "arduino_1"
+    ],
+    "highlightPins": [],
+    "wires": [],
+    "notes": "The Arduino pins 5V and GND will be used to power the breadboard rails."
+  },
+  {
+    "order": 3,
+    "title": "Wire the power rails",
+    "description": "Establishing the power rails creates the 5V and Ground (GND) distribution network. This step connects the Arduino's power output to the breadboard rails, allowing every component to access power without drawing current directly from the Arduino pins, which prevents voltage drops and overheating.",
+    "instructions": "Take a red jumper wire and connect the Arduino's 5V pin to the top positive rail of the breadboard. Take a black jumper wire and connect the Arduino's GND pin to the top negative rail of the breadboard. Ensure the wires are seated firmly in the holes.",
+    "components": [],
+    "holes": [
+      "5V",
+      "rail_top_positive_2",
+      "GND",
+      "rail_top_negative_7"
+    ],
+    "highlightComponents": [],
+    "highlightPins": [],
+    "wires": [
+      {
+        "from": "we_arduino_1_5V",
+        "to": "we_bb_1_rail_top_positive_3",
+        "color": "red"
+      },
+      {
+        "from": "we_arduino_1_GND",
+        "to": "we_bb_1_rail_top_negative_7",
+        "color": "black"
+      }
+    ],
+    "notes": "Double-check that the red wire is connected to the positive rail and the black wire to the negative rail."
+  },
+  {
+    "order": 4,
+    "title": "Wire the Ultrasonic Sensor",
+    "description": "The HC-SR04 ultrasonic sensor detects distance by sending sound pulses and measuring the echo time. It requires 5V power, Ground, and two signal pins: TRIG for triggering pulses and ECHO for reading the return echo. The 100Ω resistor protects the signal lines from short circuits.",
+    "instructions": "Insert the HC-SR04 sensor so its pins point toward the breadboard. Connect the sensor's VCC pin to hole 10f (right bank, row 10) and GND to hole 13f (right bank, row 13). Connect the TRIG pin to hole 11f and the ECHO pin to hole 12f. Route the wires neatly over the top of the sensor.",
+    "components": [
+      "ultra_1"
+    ],
+    "holes": [
+      "10j",
+      "11j",
+      "12j",
+      "13j",
+      "10f",
+      "13f",
+      "11f",
+      "12f"
+    ],
+    "highlightComponents": [
+      "ultra_1"
+    ],
+    "highlightPins": [
+      "VCC",
+      "TRIG",
+      "ECHO",
+      "GND"
+    ],
+    "wires": [
+      {
+        "from": "we_ultra_1_VCC",
+        "to": "we_bb_1_rail_top_positive_2",
+        "color": "red"
+      },
+      {
+        "from": "we_ultra_1_GND",
+        "to": "we_bb_1_rail_top_negative_6",
+        "color": "black"
+      },
+      {
+        "from": "we_ultra_1_TRIG",
+        "to": "we_arduino_1_D2",
+        "color": "yellow"
+      },
+      {
+        "from": "we_ultra_1_ECHO",
+        "to": "we_arduino_1_D3",
+        "color": "yellow"
+      }
+    ],
+    "notes": "The sensor's pins are fragile. Press them straight down until they are flush with the breadboard."
+  },
+  {
+    "order": 5,
+    "title": "Wire the Servo Motor",
+    "description": "The SG90 servo motor rotates to a specific angle. It requires 5V power, Ground, and a Signal pin to receive position commands. The servo motor draws significant current, so it is connected directly to the power rails rather than the Arduino pins.",
+    "instructions": "Place the SG90 servo motor to the right of the breadboard. Connect the servo's VCC pin to the top positive rail and GND pin to the top negative rail. Connect the Signal wire (usually orange or yellow) to the Arduino pin D6.",
+    "components": [
+      "servo_1"
+    ],
+    "holes": [
+      "rail_top_positive_4",
+      "rail_top_negative_10",
+      "SIG",
+      "D6"
+    ],
+    "highlightComponents": [
+      "servo_1"
+    ],
+    "highlightPins": [
+      "VCC",
+      "GND",
+      "SIG"
+    ],
+    "wires": [
+      {
+        "from": "we_servo_1_VCC",
+        "to": "we_bb_1_rail_top_positive_4",
+        "color": "red"
+      },
+      {
+        "from": "we_servo_1_GND",
+        "to": "we_bb_1_rail_top_negative_10",
+        "color": "black"
+      },
+      {
+        "from": "we_servo_1_SIG",
+        "to": "we_arduino_1_D6",
+        "color": "yellow"
+      }
+    ],
+    "notes": "Ensure the servo horn is disconnected or pointed away from the breadboard to prevent it from hitting the board during testing."
+  },
+  {
+    "order": 6,
+    "title": "Wire the Buzzer and Resistor",
+    "description": "The piezo buzzer produces an audible alarm when an object is detected. The 100Ω resistor limits the current flowing into the buzzer's signal pin, protecting the Arduino's digital output pin from excessive current draw. The buzzer is wired in parallel with the signal pin.",
+    "instructions": "Place the piezo buzzer on the breadboard. Connect the buzzer's positive pin (longer leg) to hole 28d (left bank, row 28) and the negative pin (shorter leg) to hole 30d (left bank, row 30). Connect one leg of the 100Ω resistor to hole 33a (left bank, row 33) and the other leg to hole 37a (left bank, row 37).",
+    "components": [
+      "buzzer_1",
+      "r_buz_1"
+    ],
+    "holes": [
+      "28a",
+      "30a",
+      "33b",
+      "37b",
+      "28d",
+      "30d",
+      "33a",
+      "37a"
+    ],
+    "highlightComponents": [
+      "buzzer_1",
+      "r_buz_1"
+    ],
+    "highlightPins": [
+      "plus",
+      "minus",
+      "pin1",
+      "pin2"
+    ],
+    "wires": [
+      {
+        "from": "we_r_buz_1_pin1",
+        "to": "we_arduino_1_D5",
+        "color": "orange"
+      },
+      {
+        "from": "we_r_buz_1_pin2",
+        "to": "we_buzzer_1_plus",
+        "color": "yellow"
+      },
+      {
+        "from": "we_buzzer_1_minus",
+        "to": "we_bb_1_rail_top_negative_8",
+        "color": "black"
+      }
+    ],
+    "notes": "Check the polarity of the buzzer: the longer leg is positive."
+  },
+  {
+    "order": 7,
+    "title": "Wire the LED and Resistor",
+    "description": "The red LED provides a visual indicator of the alarm state. The 300Ω resistor limits the LED current to a safe level (approx. 15 mA), preventing the LED from burning out. The LED is wired in parallel with the signal pin, sharing the same logic as the buzzer.",
+    "instructions": "Place the red LED on the breadboard. Insert the LED's anode (longer leg) into hole 45e (left bank, row 45) and the cathode (shorter leg) into hole 49e (left bank, row 49). Connect one leg of the 300Ω resistor to hole 45a (left bank, row 45) and the other leg to hole 50a (left bank, row 50).",
+    "components": [
+      "led_1",
+      "r_led_1"
+    ],
+    "holes": [
+      "49a",
+      "50a",
+      "45e",
+      "49e",
+      "45a",
+      "50a"
+    ],
+    "highlightComponents": [
+      "led_1",
+      "r_led_1"
+    ],
+    "highlightPins": [
+      "anode",
+      "cathode",
+      "pin1",
+      "pin2"
+    ],
+    "wires": [
+      {
+        "from": "we_r_led_1_pin1",
+        "to": "we_arduino_1_D4",
+        "color": "yellow"
+      },
+      {
+        "from": "we_led_1_cathode",
+        "to": "we_bb_1_rail_top_negative_9",
+        "color": "black"
+      }
+    ],
+    "notes": "Remember: the longer leg is the anode (positive), the shorter leg is the cathode (negative)."
+  },
+  {
+    "order": 8,
+    "title": "Connect the buzzer signal to the rail",
+    "description": "This step completes the signal path for the buzzer. The resistor connects the digital pin to the buzzer's signal input, while the buzzer's negative leg connects to the ground rail. This configuration allows the Arduino to drive the buzzer directly.",
+    "instructions": "Take a yellow jumper wire and connect the resistor leg in hole 37b to the buzzer's positive pin in hole 28d. Take a black jumper wire and connect the buzzer's negative pin in hole 30d to the top negative rail of the breadboard.",
+    "components": [
+      "buzzer_1",
+      "r_buz_1"
+    ],
+    "holes": [
+      "33b",
+      "37b",
+      "28d",
+      "30d",
+      "rail_top_negative_8"
+    ],
+    "highlightComponents": [
+      "buzzer_1",
+      "r_buz_1"
+    ],
+    "highlightPins": [
+      "pin2",
+      "plus",
+      "minus"
+    ],
+    "wires": [
+      {
+        "from": "we_r_buz_1_pin2",
+        "to": "we_buzzer_1_plus",
+        "color": "yellow"
+      },
+      {
+        "from": "we_buzzer_1_minus",
+        "to": "we_bb_1_rail_top_negative_8",
+        "color": "black"
+      }
+    ],
+    "notes": "Verify that the 100Ω resistor is in the path between the Arduino pin and the buzzer."
+  }
+]

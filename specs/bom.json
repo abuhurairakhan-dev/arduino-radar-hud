@@ -1,0 +1,44 @@
+[
+  {
+    "componentId": "arduino-uno",
+    "name": "Arduino Uno",
+    "quantity": 1,
+    "specs": "Arduino Uno R3 (ATmega328P)"
+  },
+  {
+    "componentId": "hc-sr04",
+    "name": "HC-SR04 Ultrasonic Sensor",
+    "quantity": 1,
+    "specs": "Range 2cm - 400cm"
+  },
+  {
+    "componentId": "servo-sg90",
+    "name": "SG90 Micro Servo",
+    "quantity": 1,
+    "specs": "9g, 180° rotation"
+  },
+  {
+    "componentId": "piezo-buzzer",
+    "name": "Piezo Buzzer",
+    "quantity": 1,
+    "specs": "Passive, tone 2200Hz"
+  },
+  {
+    "componentId": "led-red",
+    "name": "Red LED",
+    "quantity": 1,
+    "specs": "Standard 5mm"
+  },
+  {
+    "componentId": "resistor-300",
+    "name": "Resistor",
+    "quantity": 1,
+    "specs": "300 ohms"
+  },
+  {
+    "componentId": "resistor-100",
+    "name": "Resistor",
+    "quantity": 1,
+    "specs": "100 ohms"
+  }
+]

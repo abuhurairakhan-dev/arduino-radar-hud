@@ -1,0 +1,515 @@
+{
+  "version": 1,
+  "parts": [
+    {
+      "id": "bb_1",
+      "type": "breadboard-full",
+      "parentId": null,
+      "terminals": [],
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "id": "arduino_1",
+      "type": "arduino-uno",
+      "parentId": null,
+      "terminals": [],
+      "position": {
+        "x": -0.09,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "id": "ultra_1",
+      "type": "hc-sr04",
+      "parentId": "bb_1",
+      "terminals": [
+        {
+          "name": "VCC",
+          "connection": "10j"
+        },
+        {
+          "name": "TRIG",
+          "connection": "11j"
+        },
+        {
+          "name": "ECHO",
+          "connection": "12j"
+        },
+        {
+          "name": "GND",
+          "connection": "13j"
+        }
+      ]
+    },
+    {
+      "id": "buzzer_1",
+      "type": "piezo-buzzer",
+      "parentId": "bb_1",
+      "terminals": [
+        {
+          "name": "plus",
+          "connection": "28a"
+        },
+        {
+          "name": "minus",
+          "connection": "30a"
+        }
+      ]
+    },
+    {
+      "id": "led_1",
+      "type": "led-red",
+      "parentId": "bb_1",
+      "terminals": [
+        {
+          "name": "anode",
+          "connection": "49a"
+        },
+        {
+          "name": "cathode",
+          "connection": "50a"
+        }
+      ]
+    },
+    {
+      "id": "r_led_1",
+      "type": "resistor-300",
+      "parentId": "bb_1",
+      "terminals": [
+        {
+          "name": "pin1",
+          "connection": "45e"
+        },
+        {
+          "name": "pin2",
+          "connection": "49e"
+        }
+      ]
+    },
+    {
+      "id": "r_buz_1",
+      "type": "resistor-100",
+      "parentId": "bb_1",
+      "terminals": [
+        {
+          "name": "pin1",
+          "connection": "33b"
+        },
+        {
+          "name": "pin2",
+          "connection": "37b"
+        }
+      ]
+    },
+    {
+      "id": "servo_1",
+      "type": "servo-sg90",
+      "parentId": null,
+      "terminals": [],
+      "position": {
+        "x": 0.12281999999999998,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "id": "we_ultra_1_GND",
+      "type": "wire-end",
+      "parentId": "bb_1",
+      "terminals": [
+        {
+          "name": "t1",
+          "connection": "13f"
+        }
+      ]
+    },
+    {
+      "id": "we_bb_1_rail_top_negative_6",
+      "type": "wire-end",
+      "parentId": "bb_1",
+      "terminals": [
+        {
+          "name": "t1",
+          "connection": "rail_top_negative_6"
+        }
+      ]
+    },
+    {
+      "id": "we_arduino_1_GND",
+      "type": "wire-end",
+      "parentId": "arduino_1",
+      "terminals": [
+        {
+          "name": "t1",
+          "connection": "GND"
+        }
+      ]
+    },
+    {
+      "id": "we_bb_1_rail_top_negative_7",
+      "type": "wire-end",
+      "parentId": "bb_1",
+      "terminals": [
+        {
+          "name": "t1",
+          "connection": "rail_top_negative_7"
+        }
+      ]
+    },
+    {
+      "id": "we_buzzer_1_minus",
+      "type": "wire-end",
+      "parentId": "bb_1",
+      "terminals": [
+        {
+          "name": "t1",
+          "connection": "30d"
+        }
+      ]
+    },
+    {
+      "id": "we_bb_1_rail_top_negative_8",
+      "type": "wire-end",
+      "parentId": "bb_1",
+      "terminals": [
+        {
+          "name": "t1",
+          "connection": "rail_top_negative_8"
+        }
+      ]
+    },
+    {
+      "id": "we_led_1_cathode",
+      "type": "wire-end",
+      "parentId": "bb_1",
+      "terminals": [
+        {
+          "name": "t1",
+          "connection": "50b"
+        }
+      ]
+    },
+    {
+      "id": "we_bb_1_rail_top_negative_9",
+      "type": "wire-end",
+      "parentId": "bb_1",
+      "terminals": [
+        {
+          "name": "t1",
+          "connection": "rail_top_negative_9"
+        }
+      ]
+    },
+    {
+      "id": "we_servo_1_GND",
+      "type": "wire-end",
+      "parentId": "servo_1",
+      "terminals": [
+        {
+          "name": "t1",
+          "connection": "GND"
+        }
+      ]
+    },
+    {
+      "id": "we_bb_1_rail_top_negative_10",
+      "type": "wire-end",
+      "parentId": "bb_1",
+      "terminals": [
+        {
+          "name": "t1",
+          "connection": "rail_top_negative_10"
+        }
+      ]
+    },
+    {
+      "id": "we_ultra_1_VCC",
+      "type": "wire-end",
+      "parentId": "bb_1",
+      "terminals": [
+        {
+          "name": "t1",
+          "connection": "10f"
+        }
+      ]
+    },
+    {
+      "id": "we_bb_1_rail_top_positive_2",
+      "type": "wire-end",
+      "parentId": "bb_1",
+      "terminals": [
+        {
+          "name": "t1",
+          "connection": "rail_top_positive_2"
+        }
+      ]
+    },
+    {
+      "id": "we_arduino_1_5V",
+      "type": "wire-end",
+      "parentId": "arduino_1",
+      "terminals": [
+        {
+          "name": "t1",
+          "connection": "5V"
+        }
+      ]
+    },
+    {
+      "id": "we_bb_1_rail_top_positive_3",
+      "type": "wire-end",
+      "parentId": "bb_1",
+      "terminals": [
+        {
+          "name": "t1",
+          "connection": "rail_top_positive_3"
+        }
+      ]
+    },
+    {
+      "id": "we_servo_1_VCC",
+      "type": "wire-end",
+      "parentId": "servo_1",
+      "terminals": [
+        {
+          "name": "t1",
+          "connection": "VCC"
+        }
+      ]
+    },
+    {
+      "id": "we_bb_1_rail_top_positive_4",
+      "type": "wire-end",
+      "parentId": "bb_1",
+      "terminals": [
+        {
+          "name": "t1",
+          "connection": "rail_top_positive_4"
+        }
+      ]
+    },
+    {
+      "id": "we_ultra_1_TRIG",
+      "type": "wire-end",
+      "parentId": "bb_1",
+      "terminals": [
+        {
+          "name": "t1",
+          "connection": "11f"
+        }
+      ]
+    },
+    {
+      "id": "we_arduino_1_D2",
+      "type": "wire-end",
+      "parentId": "arduino_1",
+      "terminals": [
+        {
+          "name": "t1",
+          "connection": "D2"
+        }
+      ]
+    },
+    {
+      "id": "we_ultra_1_ECHO",
+      "type": "wire-end",
+      "parentId": "bb_1",
+      "terminals": [
+        {
+          "name": "t1",
+          "connection": "12f"
+        }
+      ]
+    },
+    {
+      "id": "we_arduino_1_D3",
+      "type": "wire-end",
+      "parentId": "arduino_1",
+      "terminals": [
+        {
+          "name": "t1",
+          "connection": "D3"
+        }
+      ]
+    },
+    {
+      "id": "we_arduino_1_D5",
+      "type": "wire-end",
+      "parentId": "arduino_1",
+      "terminals": [
+        {
+          "name": "t1",
+          "connection": "D5"
+        }
+      ]
+    },
+    {
+      "id": "we_r_buz_1_pin1",
+      "type": "wire-end",
+      "parentId": "bb_1",
+      "terminals": [
+        {
+          "name": "t1",
+          "connection": "33a"
+        }
+      ]
+    },
+    {
+      "id": "we_r_buz_1_pin2",
+      "type": "wire-end",
+      "parentId": "bb_1",
+      "terminals": [
+        {
+          "name": "t1",
+          "connection": "37a"
+        }
+      ]
+    },
+    {
+      "id": "we_buzzer_1_plus",
+      "type": "wire-end",
+      "parentId": "bb_1",
+      "terminals": [
+        {
+          "name": "t1",
+          "connection": "28d"
+        }
+      ]
+    },
+    {
+      "id": "we_arduino_1_D4",
+      "type": "wire-end",
+      "parentId": "arduino_1",
+      "terminals": [
+        {
+          "name": "t1",
+          "connection": "D4"
+        }
+      ]
+    },
+    {
+      "id": "we_r_led_1_pin1",
+      "type": "wire-end",
+      "parentId": "bb_1",
+      "terminals": [
+        {
+          "name": "t1",
+          "connection": "45a"
+        }
+      ]
+    },
+    {
+      "id": "we_servo_1_SIG",
+      "type": "wire-end",
+      "parentId": "servo_1",
+      "terminals": [
+        {
+          "name": "t1",
+          "connection": "SIG"
+        }
+      ]
+    },
+    {
+      "id": "we_arduino_1_D6",
+      "type": "wire-end",
+      "parentId": "arduino_1",
+      "terminals": [
+        {
+          "name": "t1",
+          "connection": "D6"
+        }
+      ]
+    }
+  ],
+  "wires": [
+    {
+      "id": "w_1",
+      "color": "black",
+      "from": "we_ultra_1_GND",
+      "to": "we_bb_1_rail_top_negative_6"
+    },
+    {
+      "id": "w_2",
+      "color": "black",
+      "from": "we_arduino_1_GND",
+      "to": "we_bb_1_rail_top_negative_7"
+    },
+    {
+      "id": "w_3",
+      "color": "black",
+      "from": "we_buzzer_1_minus",
+      "to": "we_bb_1_rail_top_negative_8"
+    },
+    {
+      "id": "w_4",
+      "color": "black",
+      "from": "we_led_1_cathode",
+      "to": "we_bb_1_rail_top_negative_9"
+    },
+    {
+      "id": "w_5",
+      "color": "black",
+      "from": "we_servo_1_GND",
+      "to": "we_bb_1_rail_top_negative_10"
+    },
+    {
+      "id": "w_6",
+      "color": "red",
+      "from": "we_ultra_1_VCC",
+      "to": "we_bb_1_rail_top_positive_2"
+    },
+    {
+      "id": "w_7",
+      "color": "red",
+      "from": "we_arduino_1_5V",
+      "to": "we_bb_1_rail_top_positive_3"
+    },
+    {
+      "id": "w_8",
+      "color": "red",
+      "from": "we_servo_1_VCC",
+      "to": "we_bb_1_rail_top_positive_4"
+    },
+    {
+      "id": "w_9",
+      "color": "yellow",
+      "from": "we_ultra_1_TRIG",
+      "to": "we_arduino_1_D2"
+    },
+    {
+      "id": "w_10",
+      "color": "yellow",
+      "from": "we_ultra_1_ECHO",
+      "to": "we_arduino_1_D3"
+    },
+    {
+      "id": "w_11",
+      "color": "orange",
+      "from": "we_arduino_1_D5",
+      "to": "we_r_buz_1_pin1"
+    },
+    {
+      "id": "w_12",
+      "color": "yellow",
+      "from": "we_r_buz_1_pin2",
+      "to": "we_buzzer_1_plus"
+    },
+    {
+      "id": "w_13",
+      "color": "yellow",
+      "from": "we_arduino_1_D4",
+      "to": "we_r_led_1_pin1"
+    },
+    {
+      "id": "w_14",
+      "color": "orange",
+      "from": "we_servo_1_SIG",
+      "to": "we_arduino_1_D6"
+    }
+  ]
+}
